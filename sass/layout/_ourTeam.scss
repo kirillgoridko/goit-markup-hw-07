@@ -1,0 +1,71 @@
+.team{
+    background-color: var(--bg-team-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.team-list{
+    display: flex;
+}
+.team-list>.item{
+    box-shadow:
+     0px 1px 3px rgba(0, 0, 0, 0.12), 
+     0px 1px 1px rgba(0, 0, 0, 0.14), 
+     0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: #FFFFFF;
+    width: 270px;
+}
+.team-list .item+.item{
+    margin-left: 30px;
+}
+.section-name{
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    margin-bottom: 10px;
+}
+.lead{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+}
+.text-title{
+    margin-bottom: 0;
+}
+.team-name{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.list-network{
+    display: flex;
+    justify-content: center;
+}
+.item-network{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+.item-network:not(:last-child){
+    margin-right: 10px;
+}
+.link-network{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #afb1b8;
+
+    transition: background-color 250ms var(--cubic-animation),
+    fill 250ms var(--cubic-animation);
+
+}
+.link-network:hover,
+.link-network:focus{
+    background-color: var(--accent-color);
+    fill: #ffffff;
+}

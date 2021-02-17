@@ -1,0 +1,31 @@
+.footer-content{
+    display: flex;
+    align-items: baseline;
+}
+.studio-adress{
+    margin-right: 70px;
+}
+.footer{
+    background-color: var(--bg-footer-color);
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+.map{
+    margin-bottom: 8px;
+    color: var(--white-text-bg-color); 
+    font-weight: 400;
+    font-style:normal ;
+}
+.site-contact-item:hover .site-contact,
+.site-contact.down:focus{
+    color: var(--accent-color);
+} 
+.site-contact .down{
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    padding: 0; 
+    display: inline-block;
+}
+.site-contact .site-contact-item+.site-contact-item{
+    margin-top: 9px;
+}

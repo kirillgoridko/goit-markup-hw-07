@@ -1,0 +1,25 @@
+.features{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.features-list{
+    display: flex;
+}
+/*==SVG Наши качества==*/
+.icon-division{
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 270px;
+    height: 120px;
+}
+.features-list .feature-item+.feature-item{
+    margin-left: 30px;
+}
+.feature-item{
+    min-width: 270px;
+}

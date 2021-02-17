@@ -1,0 +1,193 @@
+.modal-button{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    margin-left: auto;
+    outline: none;
+    cursor: pointer;
+}
+.modal{
+    position: absolute;
+    min-width: 528px;
+    min-height: 581px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffffff;
+    padding: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+/*==FORM==*/
+.form-blank{
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: var(--title-text-color);
+    margin-bottom: 12px;
+}
+
+.label-blank {
+    font-size: 12px;
+    line-height: 1.16;
+  
+    letter-spacing: 0.01em;
+}
+  
+.blank-input {
+    display: block;
+  
+    width: 100%;
+  
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  
+    padding: 14px 0 14px 42px;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline: none;
+  
+    cursor: pointer;
+    transition: border-color 250ms var(--cubic-animation);
+}
+  
+.relative-input {
+    position: relative;
+    width: 100%;
+  
+    margin-bottom: 10px;
+    margin-top: 4px;
+}
+.icon-blank {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  
+    fill: #212121;
+}
+.text-area{
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+    font-size: 12px;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    cursor: pointer;
+}
+.text-area::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.policy-div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.checkbox-policy{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.policy-label{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.policy-link{
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--accent-color);
+    text-decoration-line: underline;
+}
+.policy-label::before{
+    content: "";
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+}
+.policy-label::after{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    background-image: url(../images/icon-check.svg);
+    background-color: var(--accent-color);
+    background-size: contain;
+    background-origin: border-box;
+    background-position: center;
+    border: 2px solid var(--accent-color);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms var(--cubic-animation), 
+    background-image 250ms var(--cubic-animation),
+    background-color 250ms var(--cubic-animation);
+}
+
+.blank-input:hover,
+.blank-input:focus,
+.text-area:hover,
+.text-area:focus{
+    border-color: var(--accent-color);
+}
+.blank-input:hover+.icon-blank,
+.blank-input:focus+.icon-blank{
+    fill: var(--accent-color);
+}
+.policy-div .checkbox-policy:checked + .policy-label::after {
+    opacity: 1;
+    outline: 2px solid #ffffff;
+}
+.policy-div .checkbox-policy:focus + .policy-label::before {
+    outline: 1px solid rgba(33, 33, 33, 0.5);
+    border-radius: 2px;
+}
+.checkbox-policy:checked:focus + .policy-label::after {
+    opacity: 1;
+    outline: 2px solid #ffffff;
+}
