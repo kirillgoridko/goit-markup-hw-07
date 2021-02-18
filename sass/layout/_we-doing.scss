@@ -14,7 +14,7 @@
 .section-title{
 
     margin-bottom: 10px;
-    color: var(--title-text-color);
+    color: $title-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -22,7 +22,7 @@
 }
 .section-subject{
     margin-bottom: 50px;
-    color: var(--title-text-color);
+    color: $title-color;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -30,7 +30,7 @@
 }
 .images-text{
     margin-bottom: 0;
-    color: var(--white-text-bg-color);
+    color: $white-text-Color;
     line-height: 16px;
     text-align: center;
     font-weight:700;

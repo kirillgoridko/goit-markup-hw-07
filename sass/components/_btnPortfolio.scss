@@ -7,20 +7,22 @@
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: inherit;
-    color: var(--title-text-color);
-    background-color: var(--bg-team-color);
+    color: $title-color;
+    background-color: $bg-team-color;
     cursor: pointer;
 
-    transition: background-color 250ms var(--cubic-animation),
-        color 250ms var(--cubic-animation),
-        box-shadow 250ms var(--cubic-animation);
+    transition: background-color $time $cubic-animation,
+        color $time $cubic-animation,
+        box-shadow $time $cubic-animation;
+
+        &:hover, 
+        &:focus{
+            color: $white-text-Color;
+            background-color: $akcent-color;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                        0px 1px 2px rgba(0, 0, 0, 0.08), 
+                        0px 2px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+        }
 }
-.button:hover, 
-.button:focus{
-    color: var(--white-text-bg-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-                0px 1px 2px rgba(0, 0, 0, 0.08), 
-                0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-}
+

@@ -2,7 +2,7 @@
     display: block;
     width: 30px;
     height: 30px;
-    background: #FFFFFF;
+    background: $white-text-Color;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     margin-left: auto;
@@ -16,7 +16,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    background: #ffffff;
+    background: $white-text-Color;
     padding: 8px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -35,7 +35,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
-    color: var(--title-text-color);
+    color: $title-color;
     margin-bottom: 12px;
 }
 
@@ -63,7 +63,7 @@
     outline: none;
   
     cursor: pointer;
-    transition: border-color 250ms var(--cubic-animation);
+    transition: border-color $time $cubic-animation;
 }
   
 .relative-input {
@@ -80,7 +80,7 @@
     left: 12px;
     transform: translateY(-50%);
   
-    fill: #212121;
+    fill: $title-color;
 }
 .text-area{
     display: block;
@@ -96,16 +96,17 @@
     border-radius: 4px;
     resize: none;
     cursor: pointer;
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
 }
-.text-area::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
+
 .policy-div{
-    display: flex;
-    align-items: center;
+    @extend %flex-centered;
     margin-bottom: 30px;
 }
 .checkbox-policy{
@@ -121,12 +122,45 @@
     overflow: hidden;
 }
 .policy-label{
+    @extend %flex-centered;
     position: relative;
-    display: flex;
-    align-items: center;
+
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    &::before{
+        content: "";
+        display: inline-block;
+        margin-right: 7px;
+        width: 16px;
+        height: 15px;
+        border: 2px solid $title-color;
+        border-radius: 2px;
+    }
+
+    &::after{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        content: "";
+        display: inline-block;
+        margin-right: 7px;
+        width: 16px;
+        height: 15px;
+        background-image: url(../images/icon-check.svg);
+        background-color: $akcent-color;
+        background-size: contain;
+        background-origin: border-box;
+        background-position: center;
+        border: 2px solid $akcent-color;
+        border-radius: 2px;
+        opacity: 0;
+        transition: opacity $time $cubic-animation, 
+        background-image $time $cubic-animation,
+        background-color $time $cubic-animation;
+    }
 }
 
 .policy-link{
@@ -134,54 +168,24 @@
     margin-left: 2px;
     font-size: 14px;
     line-height: 1.71;
-    color: var(--accent-color);
+    color: $akcent-color;
     text-decoration-line: underline;
-}
-.policy-label::before{
-    content: "";
-    display: inline-block;
-    margin-right: 7px;
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--title-text-color);
-    border-radius: 2px;
-}
-.policy-label::after{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    content: "";
-    display: inline-block;
-    margin-right: 7px;
-    width: 16px;
-    height: 15px;
-    background-image: url(../images/icon-check.svg);
-    background-color: var(--accent-color);
-    background-size: contain;
-    background-origin: border-box;
-    background-position: center;
-    border: 2px solid var(--accent-color);
-    border-radius: 2px;
-    opacity: 0;
-    transition: opacity 250ms var(--cubic-animation), 
-    background-image 250ms var(--cubic-animation),
-    background-color 250ms var(--cubic-animation);
+    
 }
 
 .blank-input:hover,
 .blank-input:focus,
 .text-area:hover,
 .text-area:focus{
-    border-color: var(--accent-color);
+    border-color: $akcent-color;
 }
 .blank-input:hover+.icon-blank,
 .blank-input:focus+.icon-blank{
-    fill: var(--accent-color);
+    fill: $akcent-color;
 }
 .policy-div .checkbox-policy:checked + .policy-label::after {
     opacity: 1;
-    outline: 2px solid #ffffff;
+    outline: 2px solid $white-text-Color;
 }
 .policy-div .checkbox-policy:focus + .policy-label::before {
     outline: 1px solid rgba(33, 33, 33, 0.5);
@@ -189,5 +193,5 @@
 }
 .checkbox-policy:checked:focus + .policy-label::after {
     opacity: 1;
-    outline: 2px solid #ffffff;
+    outline: 2px solid $white-text-Color;
 }

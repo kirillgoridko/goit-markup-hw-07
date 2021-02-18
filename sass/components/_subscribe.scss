@@ -5,15 +5,14 @@
 
     margin-bottom: 20px;
     font-weight: 700;
-    color: white;
+    color: $white-text-Color;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     } 
 .subscribe-form{
-    display: flex;
-    align-items: center;
+    @extend %flex-centered;
 }
 .subscribe-input{
     display: inline-block;
@@ -27,20 +26,22 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-right: 12px;
+
+    &::placeholder{
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        line-height: 1.25;
+    }
 }
-.subscribe-input::placeholder{
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
-    line-height: 1.25;
-}
+
 .subscribe-button{
     display: inline-flex;
     align-items: center;
-    color: var(--white-text-bg-color);
+    color: $white-text-Color;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    background: var(--accent-color);
+    background: $akcent-color;
     min-width: 200px;
     padding: 10px 0 10px 28px;
     align-items: center;

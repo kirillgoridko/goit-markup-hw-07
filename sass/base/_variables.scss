@@ -1,12 +1,16 @@
-:root{
-    --primary-text-color:#757575;
-    --title-text-color:#212121;
-    --accent-color:#2196F3;
-    --white-text-bg-color:#FFFFFF;
-    --bg-footer-color:#2F303A;
-    --bg-team-color:#F5F4FA;
-    --footer-email-tel: rgba(255, 255, 255, 0.6);
-    --time:250ms;
-    --cubic-animation:cubic-bezier(0.4, 0, 0.2, 1);
-    --bgc-overlay:rgba(33, 150, 243, 0.9);
-}
+    //Colors
+    $primary-text-color:#757575;
+    $title-color:#212121;
+    $akcent-color:#2196F3;
+    $white-text-Color:#FFFFFF;
+    $bg-footer-color:#2F303A;
+    $bg-team-color:#F5F4FA;
+    $footer-email-tel: rgba(255, 255, 255, 0.6);
+    $bgc-overlay:rgba(33, 150, 243, 0.9);
+    //Animation
+    $time:250ms;
+    $cubic-animation:cubic-bezier(0.4, 0, 0.2, 1);
+    //Font
+    $mainFont: "Roboto", sans-serif;
+    $secondFont: "Raleway", sans-serif;
+    

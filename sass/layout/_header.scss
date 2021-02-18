@@ -2,12 +2,9 @@
     border-bottom: 0;
 }
 .main-nav{
-    display: flex;
-    align-items: center;
+    @extend %flex-centered;
     text-align: left;
-    justify-content: space-between;
-   
-   
+    justify-content: space-between;  
 }
 .site-nav,
 header .site-contact{
@@ -19,29 +16,28 @@ header .site-contact{
     margin-left: 50px;
 }
 .nav-info{
-    display: flex;
-    align-items: center;
+    @extend %flex-centered;
 }
 
 
 .site-nav .link, 
 .site-contact a{
-    transition: color 250ms var(--cubic-animation);
+    transition: color $time $cubic-animation;
     line-height: 16px;
     padding-top: 32px;
     padding-bottom: 32px;
 
-    color: var(--title-text-color); 
+    color: $title-color; 
     font-weight: 500;
     letter-spacing: 0.02em;
     text-decoration: none;
 }
 .site-nav :hover,
 .site-nav :focus{
-    color:var(--accent-color)
+    color:$akcent-color;
 }
 .site-nav .link.current {
-    color:var(--accent-color)
+    color:$akcent-color;
 }
 .current::after{
     left: 0;
@@ -50,7 +46,7 @@ header .site-contact{
     display: block;
     width: 100%;
     height: 4px;
-    background-color: var(--accent-color);
+    background-color: $akcent-color;
     position: absolute;
     border-radius: 2px;
 
@@ -59,7 +55,7 @@ header .site-contact{
     position: relative;
 }
 .icon-envelope{
-    fill: currentColor;
+     fill: currentColor;
      margin-right: 10px;
      display: inline-block;
  }
@@ -71,9 +67,9 @@ header .site-contact{
  
  
  .site-contact a {
-     color:var(--primary-text-color);
+     color:$primary-text-color;
  }
  .site-contact :hover,
  .site-contact :focus{
-     color:var(--accent-color)
+     color:$akcent-color;
  }

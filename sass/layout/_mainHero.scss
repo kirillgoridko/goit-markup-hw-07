@@ -11,7 +11,7 @@
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--bg-footer-color);
+    background-color: $bg-footer-color;
     text-align: center;
 }
 .container.hero-section{
@@ -26,7 +26,7 @@
 .hero-title{
     max-width: 700px;
     margin-bottom: 30px;
-    color: var(--white-text-bg-color);
+    color: $white-text-Color;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -35,13 +35,13 @@
     text-transform: uppercase;
 }
 .hero-button{
-    border: 1 solid var(--accent-color);
+    border: $akcent-color;
     border-radius: 4px;
     padding: 10px 32px;
     min-width: 200px;
     text-align: center;
-    color:var(--white-text-bg-color);
-    background-color: var(--accent-color);
+    color: $white-text-Color;
+    background-color: $akcent-color;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.8;

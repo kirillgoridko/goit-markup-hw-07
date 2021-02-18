@@ -21,7 +21,7 @@
     margin-right: 30px;
     margin-bottom: 30px;
 
-    transition: box-shadow 250ms var(--cubic-animation);
+    transition: box-shadow $time $cubic-animation;
 }
 .work-elements:nth-child(3n){
     margin-right: 0;
@@ -41,16 +41,13 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-
-
-
 .work-title{
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2.0;
     letter-spacing: 0.06em;
-    color: var(--title-text-color);
+    color: $title-color;
 }
 .work-text{
     margin: 0;
@@ -62,7 +59,7 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
 }
 .work-title-text{
     padding: 20px 24px;
@@ -70,12 +67,12 @@
 .overlay-text{
     font-size: 18px;
     line-height: 28px;
-    color: #FFFFFF;
+    color: $white-text-Color;
 
 }
 .card-overlay{
     position: absolute;
-    transition: transform var(--time) var(--cubic-animation);
+    transition: transform $time $cubic-animation;
     transform: translateY(100%);
     z-index: -1;
     
@@ -85,7 +82,7 @@
     height: 100%;
     padding: 63px 24px;
 
-    background: var(--bgc-overlay);
+    background: $bgc-overlay;
 
 }
 .portfolio-img{

@@ -1,6 +1,6 @@
 .logo{
     margin-right: 93px;
-    color:var(--accent-color); 
+    color: $akcent-color; 
     font-family: Raleway,cursive;
     font-weight: 700;
     font-size: 26px;
@@ -8,8 +8,8 @@
     text-decoration: none;
 }
 .logo-up{
-    color: var(--title-text-color);
+    color: $title-color;
 }
 .logo-down{
-    color: var(--white-text-bg-color);
+    color: $white-text-Color;
 }

@@ -22,14 +22,16 @@
     height: 100%;
     fill: #AFB1B8;
 
-    transition: border-color 250ms var(--cubic-animation),
-    fill 250ms var(--cubic-animation);
+    transition: border-color $time $cubic-animation,
+    fill $time $cubic-animation;
+
+    &:hover,
+    &:focus{
+    fill: $akcent-color;
+    border-color: $akcent-color;
+    }
 }
-.link-clients:hover,
-.link-clients:focus{
-    fill: var(--accent-color);
-    border-color: var(--accent-color);
-}
+
 .clients .container{
     padding: 94px 0px;
 }
