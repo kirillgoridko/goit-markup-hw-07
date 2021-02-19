@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.link-join, .subscribe-form, .main-nav, .nav-info, .icon-division, .link-network, .policy-div, .policy-label {
+  display: flex;
+  align-items: center;
+}
+
 body {
   color: #757575;
   background-color: #FFFFFF;
@@ -305,7 +310,7 @@ header .site-contact {
 .main-hero {
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../hero-img/hero-img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-img/hero-img.jpg);
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -877,10 +882,5 @@ header .site-contact {
 .work-link:focus .card-overlay {
   transform: translateY(0);
   z-index: 1;
-}
-
-.link-join, .subscribe-form, .main-nav, .nav-info, .icon-division, .link-network, .policy-div, .policy-label {
-  display: flex;
-  align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
